@@ -1,0 +1,25 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "tour booking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solomonyaw/Trillo.git"
+  },
+  "author": "solomonyaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solomonyaw/Trillo/issues"
+  },
+  "homepage": "https://github.com/solomonyaw/Trillo#readme",
+  "devDependencies": {
+    "sass": "^1.54.3"
+  }
+}
