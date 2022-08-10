@@ -138,3 +138,41 @@
     }
 
 }
+
+
+////////////////////////////////////////////////////
+/// SIDE NAVIGATION
+/// 
+
+.side-nav
+{
+ 
+    &__item
+    {
+
+    }
+
+    &__link
+    {
+        
+    }
+
+    &__icon
+    {
+     width:1.75rem;
+     height:1.75rem;
+    }
+}
+
+
+////////////////////////////////////////////////////
+/// FOOTER TEXT
+/// 
+.footer
+{   
+    font-size: 1.2rem;
+    color: var(--grey-light-4);
+    text-align: center;
+    padding: 1.5rem 0;
+    align-self: flex-end;
+}
