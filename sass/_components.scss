@@ -224,6 +224,36 @@
 
 
 ////////////////////////////////////////////////////
+/// HOTEL VIEW CONTENT
+/// 
+
+.gallery
+{
+    display: flex;
+       
+    &__item
+    {
+    
+    }
+
+    &__photo
+    {
+        width: 100%;
+        height: 20rem;
+        display: block;
+        transition: all 0.2s;
+        box-shadow: 1rem 2rem 5rem rgba(#000000, 0.6)
+    }
+
+    &__photo:hover
+    {
+      
+  transform: scaleY(1.05);
+    }
+}
+
+
+////////////////////////////////////////////////////
 /// FOOTER TEXT
 /// 
 .footer
@@ -233,3 +263,126 @@
     text-align: center;
     padding: 1.5rem 0;
 }
+
+
+.overview{
+   display: flex; 
+   border-bottom: 1px solid var(--grey-light-2);
+   font-family: inherit;
+   align-items: center;
+
+   &__heading
+   {
+     font-size: 2.25rem;
+     font-weight: 300;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     padding: 1.5rem 3.5rem;
+   }
+
+    &__stars
+    {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon-stars, 
+    &__icon-location
+    {
+      width:1.75rem;
+      height:1.75rem;
+      fill: var(--primary-color);
+    }
+
+    &__icon-location
+    { 
+        margin-right: .5rem;
+    }
+
+    &__location
+    {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    }
+ 
+    &__rating
+    {
+      background-color: var(--primary-color);
+      margin-left:2rem;
+      color:#fff;
+      align-self: stretch;
+      padding: 0 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__rating-average
+    {
+     font-size: 2.25rem;
+     font-weight: 300;
+     margin-bottom: -3px;
+    }
+
+    &____rating-count{
+        font-size: .8rem;
+        text-transform: uppercase;
+
+    }
+}
+
+////////////////////////////////////////////////////
+/// BUTTON INLINE
+///
+.btn-inline
+{
+    border: none;
+    color: var(--primary-color);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        color:var(--grey-dark-2);
+    }
+
+    &:focus{
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+
+}
+
+
+////////////////////////////////////////////////////
+/// CSS ANIMAIONS WITH KEYFRAMES
+///
+/// 
+
+@keyframes pulsate
+{
+  0%
+  {
+    transform: scale(1);
+   box-shadow: none;
+  }
+
+50%
+{
+  transform: scale(1.3);
+  box-shadow: var(--shadow-dark);
+}
+
+100%
+{
+    transform: scale(1);
+    box-shadow: none;
+}
+
+}                       
