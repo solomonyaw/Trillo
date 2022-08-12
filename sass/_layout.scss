@@ -36,7 +36,31 @@ justify-content: space-between;
 {
   background-color: #fff;
   flex-grow: 1;
-  height: 70rem;
 
+}
+
+.detail
+{
+  display: flex;
+  padding: 2.5rem;
+  background-color: var(--grey-light-4);
+  border-bottom: 1px solid var(--grey-light-2);;
+}
+
+.description
+{
+background-color: #fff;
+flex:0 0 60%;
+margin-right: 4.5rem;
+box-shadow: var(--shadow-dark);
+font-size: 1.4rem;
+padding: 2rem 4rem;
+
+}
+
+.user-reviews
+{
+background-color: olivedrab;
+flex-grow: 1;
 }
 

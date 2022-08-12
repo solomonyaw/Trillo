@@ -315,6 +315,52 @@ body {
     box-shadow: none;
   }
 }
+.paragraph:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-top: 2px solid var(--grey-light-2);
+  border-bottom: 2px solid var(--grey-light-2);
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__item {
+  flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+  display: flex;
+}
+.list__item::before {
+  content: "";
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--primary-color);
+  -webkit-mask-image: url("/img/SVG/chevron-right.svg");
+  mask-image: url("/img/SVG/chevron-right.svg");
+  background-image: cover;
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--grey-dark-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recommend__photo {
+  box-sizing: content-box;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.recommend__photo:not(:last-child) {
+  margin-right: -1.5rem;
+}
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -347,7 +393,27 @@ body {
 .hotel-view {
   background-color: #fff;
   flex-grow: 1;
-  height: 70rem;
+}
+
+.detail {
+  display: flex;
+  padding: 2.5rem;
+  background-color: var(--grey-light-4);
+  border-bottom: 1px solid var(--grey-light-2);
+}
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-dark);
+  font-size: 1.4rem;
+  padding: 2rem 4rem;
+}
+
+.user-reviews {
+  background-color: olivedrab;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
