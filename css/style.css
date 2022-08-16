@@ -45,6 +45,11 @@ html {
   font-weight: 400;
   line-height: 1.6;
 }
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 *,
 *:before,
@@ -168,11 +173,27 @@ body {
   list-style: none;
   margin-top: 3.5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+}
 .side-nav__item {
   position: relative;
 }
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item {
+    flex-grow: 1;
+  }
 }
 .side-nav__item::before {
   content: "";
@@ -204,6 +225,12 @@ body {
   position: relative;
   z-index: 10000;
 }
+@media only screen and (max-width: 56.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    justify-content: center;
+    padding: 2rem;
+  }
+}
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -230,6 +257,11 @@ body {
   color: var(--grey-light-4);
   text-align: center;
   padding: 1.5rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    display: none;
+  }
 }
 
 .overview {
@@ -359,6 +391,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 56.25em) {
+  .recommend__friends {
+    display: flex;
+  }
+}
 .recommend__photo {
   box-sizing: content-box;
   width: 4rem;
@@ -367,7 +404,7 @@ body {
   border: 3px solid #fff;
 }
 .recommend__photo:not(:last-child) {
-  margin-right: -1.5rem;
+  margin-right: -2rem;
 }
 
 .review {
@@ -377,6 +414,12 @@ body {
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
+}
+@media only screen and (max-width: 56.25em) {
+  .review {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 .review__text {
   margin-bottom: 2rem;
@@ -429,6 +472,11 @@ body {
   padding: 3.5rem 0;
   text-align: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .cta {
+    padding: 2rem 0;
+  }
+}
 .cta__book-now {
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -441,14 +489,55 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   border-radius: 100px;
-  background-image: linear-gradient(to right bottom, var(--primary-color), rgb(107, 40, 59));
+  background-image: linear-gradient(to right bottom, var(--primary-color), rgb(252, 25, 89));
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
 }
+.btn > * {
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn__visible {
+  padding: 2rem 6rem;
+}
+.btn__invisible {
+  padding: 2rem 0rem;
+  position: absolute;
+  left: 0;
+  top: -100%;
+}
+.btn:hover {
+  background-image: linear-gradient(to left bottom, var(--primary-color), rgb(252, 25, 89));
+}
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+.btn:hover .btn__invisible {
+  top: 0;
+}
+.btn:focus {
+  outline: none;
+  animation: pulsate 0.8s infinite;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--grey-light-1);
   box-shadow: val(--shadow-dark);
   min-height: 50rem;
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -462,6 +551,11 @@ body {
 
 .content {
   display: flex;
+}
+@media only screen and (max-width: 56.25em) {
+  .content {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -484,6 +578,11 @@ body {
   border-bottom: 1px solid var(--grey-light-2);
   font-size: 1.4rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .detail {
+    padding: 1rem;
+  }
+}
 
 .description {
   background-color: #fff;
@@ -492,6 +591,12 @@ body {
   box-shadow: var(--shadow-dark);
   font-size: 1.4rem;
   padding: 2rem 4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .description {
+    margin-right: 2.5rem;
+    padding: 2rem;
+  }
 }
 
 .user-reviews {
