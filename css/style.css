@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 COLORS
 
@@ -293,8 +294,15 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+.btn-inline span {
+  margin-left: 3px;
+  transition: margin-left 0.3s;
+}
 .btn-inline:hover {
   color: var(--grey-dark-2);
+}
+.btn-inline:hover span {
+  margin-left: 10px;
 }
 .btn-inline:focus {
   outline: none;
@@ -361,6 +369,80 @@ body {
 .recommend__photo:not(:last-child) {
   margin-right: -1.5rem;
 }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-dark);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.review__text {
+  margin-bottom: 2rem;
+  z-index: 10;
+  position: relative;
+}
+.review__user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.review__user-box {
+  margin-right: auto;
+}
+.review__user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.review__photo {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+.review__user-date {
+  font-size: 1rem;
+  color: var(--grey-dark-1);
+}
+.review__rating {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.review::before {
+  content: "“";
+  display: block;
+  position: absolute;
+  top: -7.5rem;
+  left: -1rem;
+  font-size: 18rem;
+  color: var(--grey-dark-3);
+  font-family: sans-serif;
+  z-index: 1;
+  margin-left: 0.5rem;
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta__book-now {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right bottom, var(--primary-color), rgb(107, 40, 59));
+}
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -400,6 +482,7 @@ body {
   padding: 2.5rem;
   background-color: var(--grey-light-4);
   border-bottom: 1px solid var(--grey-light-2);
+  font-size: 1.4rem;
 }
 
 .description {
@@ -412,8 +495,10 @@ body {
 }
 
 .user-reviews {
-  background-color: olivedrab;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
