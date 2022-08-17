@@ -21,6 +21,13 @@
   display: flex;
   justify-content:space-between;
   align-items: center;
+
+  @media only screen and (max-width:$bp-small) {
+    flex-wrap: wrap;// wrap to a new line if there are no available space
+    height: 12rem;
+    align-content: space-around;
+   }
+  
 }
 
 .content
