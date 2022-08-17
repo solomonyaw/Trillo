@@ -469,6 +469,11 @@ body {
     margin-bottom: 2rem;
   }
 }
+@media only screen and (max-width: 35.25em) {
+  .review {
+    margin: 2rem 2rem;
+  }
+}
 .review__text {
   margin-bottom: 2rem;
   z-index: 10;
@@ -666,8 +671,10 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .description {
-    margin-right: 0;
+    margin-right: 2rem;
     margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
   }
 }
 

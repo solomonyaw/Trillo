@@ -563,6 +563,11 @@
             margin-bottom: 2rem;
         }
 
+        @media only screen and (max-width:$bp-smallest) {
+        
+            margin: 2rem 2rem;
+        }
+
     &__text
     {
          margin-bottom: 2rem;
