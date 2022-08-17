@@ -654,6 +654,10 @@
     font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width:$bp-smallest) {
+        padding: 0rem 3rem;
+        }
   }
 }
 
