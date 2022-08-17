@@ -41,7 +41,7 @@ flex-direction: column;
 justify-content: space-between;
 }
 
-.hotel-view
+  .hotel-view
 {
   background-color: #fff;
   flex-grow: 1;
@@ -59,6 +59,11 @@ justify-content: space-between;
   @media only screen and (max-width:$bp-medium) {
     padding:1rem;
   }
+
+  @media only screen and (max-width:$bp-small) {
+      flex-direction: column;
+    }
+
 }
 
 .description
@@ -74,6 +79,12 @@ padding: 2rem 4rem;
 margin-right: 2.5rem;
 padding: 2rem;
 }
+
+@media only screen and (max-width:$bp-small) {
+  margin-right: 0;
+  margin-bottom: 3rem;
+}
+
 
 }
 
